@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="rmedinaExamen.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                    <Label Text="Usuario conectado: " FontSize="20" HorizontalTextAlignment="End" BackgroundColor="WhiteSmoke" TextColor="DarkBlue" Grid.Row="0" Grid.Column="0"/>
+                    <Entry x:Name="txtUsuario" BackgroundColor="WhiteSmoke" Grid.Row="0" Grid.Column="1"/>
+            </Grid>
+            
+            <Label Text="Registro de pago" FontAttributes="Bold"  FontSize="40" HorizontalTextAlignment="Center" BackgroundColor="WhiteSmoke" TextColor="DarkBlue"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nombre"  FontAttributes="Bold" FontSize="30" HorizontalTextAlignment="Start" TextColor="DodgerBlue" BackgroundColor="WhiteSmoke" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtNombre" Placeholder="Ingresar nombre" Keyboard="Text" BackgroundColor="WhiteSmoke" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Abono Inicial"  FontAttributes="Bold" FontSize="30" HorizontalTextAlignment="Start" TextColor="DodgerBlue" BackgroundColor="WhiteSmoke" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtAbonoInicial" Placeholder="Ingresar monto" Keyboard="Numeric" BackgroundColor="WhiteSmoke" Grid.Row="1" Grid.Column="1" TextChanged="txtAbonoInicial_TextChanged"/>
+
+                <Label Text="Pago mensual"  FontAttributes="Bold" FontSize="30" HorizontalTextAlignment="Start" TextColor="DodgerBlue" BackgroundColor="WhiteSmoke" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="txtPagoMensual" Placeholder="" BackgroundColor="WhiteSmoke" Grid.Row="2" Grid.Column="1"/>
+
+                <Button x:Name="btnCalcularPaMen" Text="Cal. Mensualidad" Clicked="btnCalcularPaMen_Clicked" Grid.Row="3" Grid.Column="0"/>
+                <Button x:Name="btnLimpiarPaMen" Text="Limpiar" Clicked="btnLimpiarPaMen_Clicked" Grid.Row="3" Grid.Column="1"/>
+
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked" Grid.Row="0"/>
+
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
